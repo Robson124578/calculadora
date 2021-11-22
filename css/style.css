@@ -20,7 +20,7 @@
 }
 
 .conteiner-geral {
-    background-image: linear-gradient(to left, #000, rgb(113, 95, 95));
+    /* background-image: linear-gradient(to left, #6a706e, #605757); */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
 .conteiner-logo,
 .conteiner-display-calculadora,
 .container-teclado-calculadora {
-    background-image: linear-gradient(to left, #7979d3, rgb(21, 166, 228));
+    background-image: linear-gradient(to left, #585873, #31275a);
 }
 
 .conteiner-calculadora {
@@ -41,6 +41,7 @@
     width: 50%;
     position: relative;
     border-radius: 10px;
+    box-shadow: 1px 1px 4px 4px #000;
 }
 
 .conteiner-logo {
@@ -70,9 +71,10 @@
     height: 90%;
     width: 95%;
     padding: 5% 1% 5% 1%;
+    box-shadow: 1px 1px 4px 1px #000;
 }
 
-.display-calculadora h2 {
+.texto_display {
     text-align: right;
     font-size: 4em;
 }
@@ -110,7 +112,7 @@
 .conteiner-operadores {
     display: grid;
     padding-left: 5px;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
 }
 
 .tecla {
@@ -123,6 +125,10 @@
     font-family: font-numeros;
     background-image: linear-gradient(to right, #2f2f26, rgb(38, 48, 86));
     -webkit-box-shadow: 5px 5px 15px 5px #fff;
-    box-shadow: 1px 1px 4px 1px #fff;
+    box-shadow: 1px 1px 4px 1px #000;
     cursor: pointer;
+}
+
+.tcl-del {
+    grid-column: 1/3;
 }
