@@ -14,7 +14,13 @@
     src: url(../fonts/Calculator.ttf);
 }
 
+@font-face {
+    font-family: "font-numeros";
+    src: url(../fonts/Changa-VariableFont_wght.ttf);
+}
+
 .conteiner-geral {
+    background-image: linear-gradient(to left, #000, rgb(113, 95, 95));
     height: 100vh;
     display: flex;
     align-items: center;
@@ -25,13 +31,14 @@
 .conteiner-logo,
 .conteiner-display-calculadora,
 .container-teclado-calculadora {
-    background-color: #575757;
+    background-image: linear-gradient(to left, #7979d3, rgb(21, 166, 228));
 }
 
 .conteiner-calculadora {
+    min-width: 320PX;
     padding: 5px;
     height: 70%;
-    width: 30%;
+    width: 50%;
     position: relative;
     border-radius: 10px;
 }
@@ -87,9 +94,35 @@
 
 .conteiner-operadores,
 .conteiner-numeros {
-    border: 1px solid rgb(243, 238, 238);
+    /* border: 1px solid rgb(243, 238, 238); */
+    /* padding: 5px; */
+    gap: 5px;
 }
 
 .conteiner-numeros {
     grid-column: 1/4;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-right: 2px solid #fff;
+    padding-right: 5px;
+}
+
+.conteiner-operadores {
+    display: grid;
+    padding-left: 5px;
+    grid-template-columns: auto;
+}
+
+.tecla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 2em;
+    font-family: font-numeros;
+    background-image: linear-gradient(to right, #2f2f26, rgb(38, 48, 86));
+    -webkit-box-shadow: 5px 5px 15px 5px #fff;
+    box-shadow: 1px 1px 4px 1px #fff;
+    cursor: pointer;
 }
